@@ -7,6 +7,7 @@ class GnuradioOsmosdr < Formula
       sha256 "a5c439f275cf11965d2fc67957e1d221b4f985ff5d87cdc9760522ba8319215d"
   end
 
+  depends_on "cmake" => :build
   depends_on "boost"
   depends_on "gnuradio"
   depends_on "hackrf"
