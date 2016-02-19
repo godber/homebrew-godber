@@ -4,7 +4,7 @@ class GnuradioOsmosdr < Formula
 
   stable do
       url "http://cgit.osmocom.org/gr-osmosdr/snapshot/gr-osmosdr-0.1.4.zip"
-      sha256 "a5c439f275cf11965d2fc67957e1d221b4f985ff5d87cdc9760522ba8319215d"
+      sha256 "1c36fdb24b76b4114beeebdab77b463820f434c16a2b622657983e3885f32a4a"
   end
 
   depends_on "cmake" => :build
