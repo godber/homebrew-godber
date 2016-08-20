@@ -6,11 +6,13 @@ class GnuradioOsmosdr < Formula
       url "http://cgit.osmocom.org/gr-osmosdr/snapshot/gr-osmosdr-0.1.4.zip"
       sha256 "1c36fdb24b76b4114beeebdab77b463820f434c16a2b622657983e3885f32a4a"
   end
+  head 'git://git.osmocom.org/gr-osmosdr', :branch => 'master'
 
   depends_on "cmake" => :build
   depends_on "boost"
   depends_on "gnuradio"
   depends_on "hackrf"
+  depends_on "swig"
 
   # cheetah starts here
   resource "Markdown" do
@@ -37,7 +39,7 @@ class GnuradioOsmosdr < Formula
     end
 
     mkdir "build" do
-        system "cmake", "..", *std_cmake_args
+        system "cmake", "..", '-DPYTHON_LIBRARY=/usr/local/Frameworks/Python.framework/Versions/2.7/Python ', *std_cmake_args
         system "make"
         system "make install"
     end
